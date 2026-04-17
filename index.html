@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yojana Saathi – Government Schemes for Everyone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="app">
+
+    <!-- HEADER -->
+    <div id="header">
+      <div class="logo">Y</div>
+      <div class="title-block">
+        <h2>Yojana Saathi</h2>
+        <p>Government schemes, made accessible</p>
+      </div>
+      <div class="status">
+        <span>AI powered</span>
+        <div class="dot-green"></div>
+      </div>
+    </div>
+
+    <!-- LANGUAGE BAR -->
+    <div id="lang-bar">
+      <span>Language:</span>
+      <button class="lang-btn active" data-lang="en">English</button>
+      <button class="lang-btn" data-lang="hi">हिन्दी</button>
+      <button class="lang-btn" data-lang="bn">বাংলা</button>
+      <button class="lang-btn" data-lang="ta">தமிழ்</button>
+      <button class="lang-btn" data-lang="te">తెలుగు</button>
+    </div>
+
+    <div id="main">
+
+      <!-- SIDEBAR -->
+      <div id="sidebar">
+        <h3>Category</h3>
+        <button class="filter-tag active" data-filter="all">All schemes</button>
+        <button class="filter-tag" data-filter="student">Students</button>
+        <button class="filter-tag" data-filter="women">Women</button>
+        <button class="filter-tag" data-filter="farmer">Farmers</button>
+        <button class="filter-tag" data-filter="startup">Startups</button>
+        <button class="filter-tag" data-filter="health">Health</button>
+        <button class="filter-tag" data-filter="housing">Housing</button>
+
+        <div class="divider"></div>
+
+        <h3>State</h3>
+        <select id="state-select">
+          <option value="all">All India</option>
+          <option value="wb">West Bengal</option>
+          <option value="up">Uttar Pradesh</option>
+          <option value="mh">Maharashtra</option>
+          <option value="tn">Tamil Nadu</option>
+          <option value="ka">Karnataka</option>
+        </select>
+      </div>
+
+      <!-- CHAT -->
+      <div id="chat-area">
+        <div id="messages"></div>
+        <div id="input-area">
+          <button id="voice-btn" title="Voice input">🎤</button>
+          <textarea id="user-input" placeholder="Ask about any scheme... e.g. 'I am a student in WB'" rows="1"></textarea>
+          <button id="send-btn">➤</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="schemes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
