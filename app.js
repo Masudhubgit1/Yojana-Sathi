@@ -1,6 +1,6 @@
 // --- 1. CONFIGURATION ---
 // Get your key from: https://aistudio.google.com/
-const API_KEY = "AQ.Ab8RN6LqGpWcs5GD4Xb-ijpCZhhAzW0S4hxWgo9BUr_0vR1XBg"; // Keep your working key
+const API_KEY = "AIzaSyCaNkzTXtl8geLam4JoNGc7HLS8NcH4Nyg"; // Keep your working key
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 let currentLang = "English"; // This is the starting language
 let isLoading = false;
