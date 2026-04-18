@@ -143,6 +143,33 @@ function init() {
       sendUserMessage(e.target.textContent);
     }
   });
+  // --- PASTE THE VOICE LOGIC HERE (Around Line 145) ---
+  const voiceBtn = document.getElementById("voice-btn");
+  const userInput = document.getElementById("user-input");
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  if (SpeechRecognition) {
+      const recognition = new SpeechRecognition();
+      recognition.lang = 'en-IN'; 
+
+      voiceBtn.addEventListener("click", () => {
+          recognition.start();
+          voiceBtn.classList.add("listening"); // Adds the pulse effect
+      });
+
+      recognition.onresult = (event) => {
+          const transcript = event.results[0][0].transcript;
+          userInput.value = transcript;
+          voiceBtn.classList.remove("listening");
+          sendUserMessage(transcript);
+      };
+
+      recognition.onerror = () => {
+          voiceBtn.classList.remove("listening");
+          console.error("Speech recognition error");
+      };
+  }
+  // --- END OF VOICE LOGIC ---
 // --- Language Button Clicks ---
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.addEventListener("click", () => {
